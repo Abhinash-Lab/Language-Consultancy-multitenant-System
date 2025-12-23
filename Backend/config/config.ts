@@ -8,7 +8,8 @@ const envConfig = {
   db_Password : process.env.DB_PASSWORD,
   db_dialect : process.env.DB_DIALECT,
   db_host : process.env.DB_HOST,
-  db_port : Number(process.env.DB_PORT)
+  db_port : Number(process.env.DB_PORT),
+  jwt_secretKey : process.env.JWT_SECRET_KEY as string
 }
 
 export default envConfig;

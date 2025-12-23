@@ -21,7 +21,7 @@ sequelize.authenticate()
 
 //migration code here
 
-sequelize.sync({alter:true})
+sequelize.sync({alter:false})
 .then(()=>{
   console.log("Migrated successfully")
 })

@@ -1,5 +1,4 @@
-import { col } from "sequelize"
-import {Table,Column,Model,DataType, PrimaryKey} from "sequelize-typescript"
+import {Table,Column,Model,DataType} from "sequelize-typescript"
 
 @Table({
   tableName : "users",
@@ -22,11 +21,14 @@ class user extends Model{
 
   @Column({
     type : DataType.STRING
+    
   })
   declare password : string
 
   @Column({
-    type : DataType.STRING
+    type : DataType.STRING,
+    unique : true,
+
   })
   declare email : string
 
